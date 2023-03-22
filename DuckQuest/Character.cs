@@ -14,6 +14,7 @@ namespace DuckQuest
         protected int Speed;
         protected int Brains;
         protected int Health;
+        protected Random DiceRoll;
 
         public Character(string name, int str, int sp, int br)
         {
@@ -22,6 +23,7 @@ namespace DuckQuest
             Speed = sp;
             Brains = br;
             Health = Strength * Speed;
+            DiceRoll = new Random();
         }
 
         public void CharacterSheet()
@@ -32,6 +34,11 @@ namespace DuckQuest
             WriteLine($"Brains      {Brains}");
             WriteLine($"Health      {Health}");
             WriteLine("---------\n");
+        }
+
+        public virtual void Fight()
+        {
+            WriteLine("");
         }
 
         public void Attack ()

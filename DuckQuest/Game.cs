@@ -35,7 +35,7 @@ namespace DuckQuest
 
             foreach (Character character in CharacterList) 
             {
-                
+                character.Fight();
             }
       
             WaitForKey();

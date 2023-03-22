@@ -25,5 +25,19 @@ namespace DuckQuest
         {
             WriteLine($"{Name} tries to talk their way out of it.");
         }
+
+        public override void Fight ()
+        {
+           int randnum = DiceRoll.Next(1, 21);
+            if (randnum <= 10)
+            {
+                Flee();
+            }
+            else
+            {
+                Speak();
+            }
+
+        }
     }
 }
