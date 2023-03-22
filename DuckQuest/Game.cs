@@ -10,11 +10,21 @@ namespace DuckQuest
 {
     internal class Game
     {
-        private Player Ducky;
+        
+        private List<Character> CharacterList;
         
         public Game() 
         {
-            Ducky = new Player("Ducky", 5, 3, 4);
+            Player ducky = new Player("Ducky", 6, 5, 4);
+            Player dread = new Player("Dread", 1, 2, 3);
+            Player rev = new Player("Rev", 7, 8, 9);
+
+            CharacterList = new List<Character>()
+            {
+                ducky,
+                dread,
+                rev
+            };
         }
 
         public void Run()
@@ -23,12 +33,11 @@ namespace DuckQuest
 
             WriteLine("");
 
-            Ducky.CharacterSheet();
-            Ducky.Attack();
-            Ducky.Flee();
-            Ducky.Search();
-            Ducky.Speak();
-
+            foreach (Character character in CharacterList) 
+            {
+                
+            }
+      
             WaitForKey();
             
         }

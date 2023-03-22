@@ -30,7 +30,8 @@ namespace DuckQuest
             WriteLine($"Strength    {Strength}");
             WriteLine($"Speed       {Speed}");
             WriteLine($"Brains      {Brains}");
-            WriteLine($"Health      {Health}\n");
+            WriteLine($"Health      {Health}");
+            WriteLine("---------\n");
         }
 
         public void Attack ()
