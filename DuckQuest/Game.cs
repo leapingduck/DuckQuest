@@ -20,6 +20,9 @@ namespace DuckQuest
         
         public Game() 
         {
+
+            
+
             Player ducky = new Player("Ducky", 6, 5, 4);
             Player dread = new Player("Dread", 1, 2, 3);
             Player rev = new Player("Rev", 7, 8, 9);
@@ -39,6 +42,8 @@ namespace DuckQuest
             WriteLine(ArtAssets.Header);
 
             WriteLine("");
+
+            WriteLine("The three adventurers walk into a cave and find out it is actually full of bandits.\n");
 
             foreach (Character character in CharacterList) 
             {
