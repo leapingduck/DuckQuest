@@ -1,0 +1,15 @@
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.csproj.AssemblyReference.cache
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.AssemblyInfoInputs.cache
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.AssemblyInfo.cs
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.csproj.CoreCompileInputs.cache
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\bin\Debug\net7.0\DuckQuest.exe
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\bin\Debug\net7.0\DuckQuest.deps.json
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\bin\Debug\net7.0\DuckQuest.runtimeconfig.json
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\bin\Debug\net7.0\DuckQuest.dll
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\bin\Debug\net7.0\DuckQuest.pdb
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.dll
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\refint\DuckQuest.dll
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.pdb
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\DuckQuest.genruntimeconfig.cache
+C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\obj\Debug\net7.0\ref\DuckQuest.dll
