@@ -15,6 +15,7 @@ namespace DuckQuest
         protected int Brains;
         protected int Health;
         protected Random DiceRoll;
+        protected Item? CurrentItem;
 
         public Character(string name, int str, int sp, int br)
         {
@@ -34,6 +35,11 @@ namespace DuckQuest
             WriteLine($"Brains      {Brains}");
             WriteLine($"Health      {Health}");
             WriteLine("---------\n");
+        }
+
+        public void Equip(Item item)
+        {
+            CurrentItem = item;
         }
 
         public virtual void Fight()

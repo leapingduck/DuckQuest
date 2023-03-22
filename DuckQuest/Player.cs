@@ -28,16 +28,23 @@ namespace DuckQuest
 
         public override void Fight ()
         {
-           int randnum = DiceRoll.Next(1, 21);
-            if (randnum <= 10)
+            if (CurrentItem != null)
             {
-                Flee();
+                WriteLine($"{Name} charges forward with their {CurrentItem.Name}");
             }
             else
             {
-                Speak();
-            }
 
+                int randnum = DiceRoll.Next(1, 21);
+                if (randnum <= 10)
+                {
+                    Flee();
+                }
+                else
+                {
+                    Speak();
+                }
+            }
         }
     }
 }
