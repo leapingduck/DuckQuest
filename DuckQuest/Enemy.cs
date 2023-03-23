@@ -9,8 +9,8 @@ namespace DuckQuest
 {
     internal class Enemy : Character
     {
-        public Enemy(string name, int str, int sp, int br)
-            : base(name, str, sp, br)
+        public Enemy(string name, int str, int sp, int br, int health)
+            : base(name, str, sp, br, health)
         {
 
         }
@@ -20,17 +20,17 @@ namespace DuckQuest
             WriteLine("The enemy tries to taunt you");
         }
 
-        public void Stealth()
+        public void Attack()
         {
-            WriteLine("The Enemy Tries to hide.");
+            WriteLine("The enemy charges forward.");
         }
 
-        public override void Fight()
+        public override void Attack(Character otherCharacter)
         {
             int randnum = DiceRoll.Next(1, 21);
             if (randnum <= 10)
             {
-                Stealth();
+                Attack();
             }
             else
             {

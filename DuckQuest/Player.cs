@@ -10,8 +10,8 @@ namespace DuckQuest
 {
     internal class Player : Character
     {
-        public Player(string name, int str, int sp, int br)
-            : base(name, str, sp, br)
+        public Player(string name, int str, int sp, int br, int health)
+            : base(name, str, sp, br, health)
         {
 
         }
@@ -26,24 +26,24 @@ namespace DuckQuest
             WriteLine($"{Name} tries to talk their way out of it.");
         }
 
-        public override void Fight ()
+        public override void Attack (Character otherCharacter)
         {
-            if (CurrentItem != null)
+            if (CurrentItem == null)
             {
-                WriteLine($"{Name} charges forward with their {CurrentItem.Name}");
+                WriteLine($"{Name} charges towards {otherCharacter.Name} with their fists\n");
             }
             else
             {
-
-                int randnum = DiceRoll.Next(1, 21);
-                if (randnum <= 10)
-                {
-                    Flee();
-                }
-                else
-                {
-                    Speak();
-                }
+                WriteLine($"{Name} charges forward {otherCharacter.Name} with their {CurrentItem.Name}");
+                //int randnum = DiceRoll.Next(1, 21);
+                //if (randnum <= 10)
+                //{
+                //    Flee();
+                //}
+                //else
+                //{
+                //    Speak();
+                //}
             }
         }
     }

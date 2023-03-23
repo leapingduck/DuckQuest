@@ -9,21 +9,21 @@ namespace DuckQuest
 {
     internal class Character
     {
-        protected string Name;
-        protected int Strength;
-        protected int Speed;
-        protected int Brains;
-        protected int Health;
-        protected Random DiceRoll;
+        public string Name { get; protected set; }
+        public int Strength { get; protected set; }
+        public int Speed { get; protected set; }
+        public int Brains { get; protected set; }
+        public int Health { get; protected set; }
+        public Random DiceRoll { get; protected set; }
         protected Item? CurrentItem;
 
-        public Character(string name, int str, int sp, int br)
+        public Character(string name, int str, int sp, int br, int health)
         {
             Name = name;
             Strength = str;
             Speed = sp;
             Brains = br;
-            Health = Strength * Speed;
+            Health = health;
             DiceRoll = new Random();
         }
 
@@ -42,12 +42,8 @@ namespace DuckQuest
             CurrentItem = item;
         }
 
-        public virtual void Fight()
-        {
-            WriteLine("");
-        }
-
-        public void Attack ()
+       
+        public virtual void Attack (Character otherCharacter)
         {
             WriteLine($"{Name} attacks with his broadsword!");
         }

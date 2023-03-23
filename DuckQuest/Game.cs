@@ -10,24 +10,17 @@ namespace DuckQuest
 {
     internal class Game
     {
-        //private Player ducky;
-        //private Player dread;
-        //private Player rev;
-        //private Weapon sword;
-
-
+        private Player CurrentPlayer;
         private List<Character> CharacterList;
-        
+
         public Game() 
         {
-
-            
-
-            Player ducky = new Player("Ducky", 6, 5, 4);
-            Player dread = new Player("Dread", 1, 2, 3);
-            Player rev = new Player("Rev", 7, 8, 9);
+           //This creates the items and players right now. 
+            Player ducky = new Player("Ducky", 26, 25, 34,20);
+            Player dread = new Player("Dread", 1, 2, 3, 20);
+            Player rev = new Player("Rev", 17, 38, 49, 20);
             Weapon sword = new Weapon("sword", "Sharped edged metal thing", 5);
-            ducky.Equip(sword);
+            //ducky.Equip(sword);
 
             CharacterList = new List<Character>()
             {
@@ -43,15 +36,24 @@ namespace DuckQuest
 
             WriteLine("");
 
-            WriteLine("The three adventurers walk into a cave and find out it is actually full of bandits.\n");
+            //CurrentPlayer = new Player("Dread", 1, 2, 3, 20);
+            //urrentPlayer.CharacterSheet();
 
-            foreach (Character character in CharacterList) 
-            {
-                character.Fight();
-            }
-      
-            WaitForKey();
+            //CurrentPlayer.Equip(Weapon.sword);
+
+            //CurrentPlayer.Attack(CharacterList[0]);
             
+            Character_Creation.CreateCharacter();
+
+            //WriteLine("The three adventurers walk into a cave and find out it is actually full of bandits.\n");
+
+            //foreach (Character character in CharacterList) 
+            //{
+            //    character.Fight();
+            //}
+
+           WaitForKey();
+
         }
 
         private void WaitForKey()
