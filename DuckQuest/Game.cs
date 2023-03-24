@@ -58,9 +58,8 @@ namespace DuckQuest
 
         private void WaitForKey()
         {
-            WriteLine("");
-            WriteLine("Press any key to continue...");
-            ReadKey(true);
+            WriteLine("\nPress <Enter> key to finish...");
+            while(Console.ReadKey(true).Key != ConsoleKey.Enter) { };
         }
     }
 }

@@ -10,15 +10,16 @@ namespace DuckQuest
     {
         //Fields
         private static Random rand = new Random();
-        public int result;
+        public static int d20result {  get; private set; }
         
         //Constructor
         public Dice()
         { 
         }
-        public void D20()
+        public static int D20()
         {
-            result = rand.Next(1, 21);
+            d20result = rand.Next(1, 21);
+            return d20result;
         }
 
 
