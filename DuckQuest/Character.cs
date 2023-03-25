@@ -27,17 +27,7 @@ namespace DuckQuest
             DiceRoll = new Random();
         }
 
-        public void CharacterSheet()
-        {
-            WriteLine($"---{Name}---");
-            WriteLine($"Strength    {Strength}");
-            WriteLine($"Speed       {Speed}");
-            WriteLine($"Brains      {Brains}");
-            WriteLine($"Health      {Health}");
-            WriteLine("---------\n");
-        }
-
-        public void Equip(Item item)
+       public void Equip(Item item)
         {
             CurrentItem = item;
         }

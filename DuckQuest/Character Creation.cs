@@ -4,22 +4,29 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using static System.Console;
 
 namespace DuckQuest
 {
     internal class Character_Creation
     {
-        Dice dice = new Dice();
+        
+
         new List<Weapon> weapons;
+        new List<Armor> armors;
         public static void CreateCharacter()
         {
             WriteLine("Let's start with creating a character.\n");
 
-            int strength = Dice.d20result;
-            int speed = 5;
-            int brains = 3;
-            int health = 3;
+            Dice.StatGen();
+            int strength = Dice.statResult;
+            Dice.StatGen(); ;
+            int speed = Dice.statResult;
+            Dice.StatGen();
+            int brains = Dice.statResult;
+            Dice.HealthGen();
+            int health = Dice.healthResult;
 
             //Type your name
             WriteLine("What is your character's name?");
@@ -40,42 +47,46 @@ namespace DuckQuest
             ////Select Weapons from list
 
             string weaponPrompt = "\nSelect your weapon from the list";
-            string[] weaponsList = { "Sword", "Axe", "Spear" };
+            string[] weaponsList = { "Sword", "Axe", "Spear", "Warhammer", "Scythe", "No Weapon"};
 
-
-            Dice dice = new Dice();
+            
             Menu weaponsMenu = new Menu(weaponPrompt, weaponsList);
             weaponsMenu.Run();
 
+
+
             WaitForKey();
             Clear();
-            //WriteLine("\nWeapons are next!\n");
-            //WriteLine("Select from the following items");
-            //WriteLine("1. Sword");
-            //WriteLine("2. Spear");
-            //WriteLine("3. Axe");
-            //WriteLine("4. Warhammer");
-            //WriteLine("5. Scythe");
-            //WriteLine("6. I don't need a weapon\n");
-                     
-            //Select Armor from list 
-            // Make a shield that is only usable with some weapons? 
-            //WriteLine("\nArmor is next!\n");
-            //WriteLine("Select from the following items");
-            //WriteLine("1. Chain Mail");
-            //WriteLine("2. Leather");
-            //WriteLine("3. Scale Mail");
-            //WriteLine("4. Breastplate");
-            //WriteLine("5. Full Plate");
-            //WriteLine("6. I don't need armor");
 
-            string CharacterArmor = "armor";
+            string armorPrompt = "\nSelect your armor from the list.";
+            string[] armorList = { "Chain Mail", "Leather", "Scale Mail", "Breastplate", "Full Plate", "I don't need armor" };
+            
+            Clear();
+            
+            Menu armorMenu = new Menu(armorPrompt, armorList);
+            armorMenu.Run();
+                    
 
-           // WriteLine($"You created {characterName}! They are wielding a {characterWeapon} and wearing a {CharacterArmor}.");
+            // WriteLine($"You created {characterName}! They are wielding a {characterWeapon} and wearing a {CharacterArmor}.");
 
             //Show Full character sheet at end
 
+            Clear();
+            WriteLine($"---{characterName}---");
+            WriteLine($"Strength    {strength}");
+            WriteLine($"Speed       {speed}");
+            WriteLine($"Brains      {brains}");
+            WriteLine($"Health      {health}");
+            WriteLine("---------");
+            WriteLine("You are wielding a ....");
+            WriteLine("You decided you didn't need armor for some reason.");
+            WriteLine("---------\n\n");
+            WriteLine("Are you content with your choice? Y/N");
+            Readykey
+
         }
+
+        
 
 
         private static void WaitForKey()
