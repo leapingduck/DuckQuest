@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DuckQuest
+﻿namespace DuckQuest
 {
-    internal class Item
+
+    class Item
     {
 
-        public String Name { get; protected set; }
-        public String Description { get; protected set; }
+        public string Name { get; protected set; }
+        public string Description { get; protected set; }
         //public int StrengthPenalty { get; protected set; }
         //public int SpeedPenalty { get; protected set; }
         //public int BrainsPenalty { get; protected set; }
@@ -19,7 +14,7 @@ namespace DuckQuest
         //public int BrainsBonus { get; protected set; }
 
 
-        public Item(string name, string description) 
+        public Item(string name, string description)
         {
             Name = name;
             Description = description;

@@ -49,5 +49,12 @@ namespace DuckQuest
 
         }
 
+        /*Alternate Stat rolling
+
+        Select number of D6 for each stat. 
+        Roll number of d6 equal to selected die
+        Equals strength*/
+           
+
     }
 }

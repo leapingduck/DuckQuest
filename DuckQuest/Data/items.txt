@@ -1,0 +1,13 @@
+sword,a sword of whatever shape floats your boat,strength,d6,6
+dagger,like a sword but smaller,speed,d4,5
+sickle,here in case you need to farm when you are done,speed,d6,5
+flail,a metal ball on a chain,strength,d10,3
+spear,a dagger on a stick, speed,d8,2
+morningstar,a flail without the chain, strength,d8,2
+whip,a string that hurts, speed,d6,6
+quarterstaff,a big stick, strength,d8,5
+club,a bigger stick, strength,d10,5
+axe,used to make sticks, speed,d6,2
+wizards staff,magic fire pew pew pew, brains,d8,2
+warhammer,like a regular hammer but war sized,strength,d6,1
+no weapon,for when you haven't learned about consequences yet,strength,d4,2

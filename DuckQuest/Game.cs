@@ -32,6 +32,8 @@ namespace DuckQuest
 
         public void Run()
         {
+            Utilities.CheckForFiles();
+
             WriteLine(ArtAssets.Header);
 
             WriteLine("");

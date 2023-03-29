@@ -19,6 +19,14 @@ namespace DuckQuest
         {
             WriteLine("Let's start with creating a character.\n");
 
+            
+
+            //Type your name
+            WriteLine("What is your character's name?");
+            String characterName = ReadLine();
+            WriteLine($"\nNice to meet you, {characterName}!\n");
+
+
             Dice.StatGen();
             int strength = Dice.statResult;
             Dice.StatGen(); ;
@@ -27,11 +35,6 @@ namespace DuckQuest
             int brains = Dice.statResult;
             Dice.HealthGen();
             int health = Dice.healthResult;
-
-            //Type your name
-            WriteLine("What is your character's name?");
-            String characterName = ReadLine();
-            WriteLine($"\nNice to meet you, {characterName}!\n");
 
             //Roll 3d6 for each stat + 4d6 health
             WriteLine("Are you ready to roll for stats?");
@@ -82,8 +85,7 @@ namespace DuckQuest
             WriteLine("You decided you didn't need armor for some reason.");
             WriteLine("---------\n\n");
             WriteLine("Are you content with your choice? Y/N");
-            Readykey
-
+            
         }
 
         

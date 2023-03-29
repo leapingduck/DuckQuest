@@ -34,6 +34,7 @@ namespace DuckQuest
                     prefix = ">>";
                     ForegroundColor = ConsoleColor.Black;
                     BackgroundColor = ConsoleColor.White;
+                    
                 }
                 else
                 {
@@ -43,6 +44,7 @@ namespace DuckQuest
                 }
 
                 WriteLine($"{prefix}{currentOption}");
+                //WriteLine($"TODO: Add descriptions on active selection.");
             }
             ResetColor();
         }
