@@ -9,6 +9,7 @@ using static System.Console;
 
 namespace DuckQuest
 {
+    public 
     internal class Character_Creation
     {
         
@@ -50,10 +51,8 @@ namespace DuckQuest
             ////Select Weapons from list
 
             string weaponPrompt = "\nSelect your weapon from the list";
-            string[] weaponsList = { "Sword", "Axe", "Spear", "Warhammer", "Scythe", "No Weapon"};
-
-            
-            Menu weaponsMenu = new Menu(weaponPrompt, weaponsList);
+                        
+            Menu weaponsMenu = new Menu(weaponPrompt, Utilities.weaponsList);
             weaponsMenu.Run();
 
 

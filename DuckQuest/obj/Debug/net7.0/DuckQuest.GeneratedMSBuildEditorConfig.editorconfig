@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DuckQuest
-build_property.ProjectDir = /Users/dylanmoore/Projects/DuckQuest/DuckQuest/
+build_property.ProjectDir = C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\

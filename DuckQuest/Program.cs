@@ -2,7 +2,7 @@
 
 Console.Title = "DuckQuest";
 
-Utilities.ItemTest();
+Utilities.WeaponTest();
 
 //Game myGame = new Game();
 //myGame.Run();

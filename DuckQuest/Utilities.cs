@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DuckQuest
 {
+   
     internal class Utilities
     {
-
+        public string[] WeaponList = weaponArray.ToArray();
         public Utilities() { }
 
         internal static void WeaponTest()
@@ -16,6 +18,7 @@ namespace DuckQuest
             string path = @"C:\Users\dmoore\source\repos\DuckQuest\DuckQuest\Data\weapons.txt";
             if (File.Exists(path))
             {
+                List<string> weaponArray = new List<string>();
                 string[] weaponAsString = File.ReadAllLines(path);
                 for (int i = 0; i < weaponAsString.Length; i++)
                 {
@@ -25,8 +28,16 @@ namespace DuckQuest
                     string weaponAttribute = weaponSplits[2];
                     string weaponDamage = weaponSplits[3];
                     string weaponToHit = weaponSplits[4];
-                    Console.WriteLine($"The {weaponName} is {weaponDescription}. It uses {weaponAttribute} and does {weaponDamage} damage with a +{weaponToHit} to hit");
+                    weaponArray.Add(weaponName);
+                    
+                    //Console.WriteLine($"The {weaponName} is {weaponDescription}. It uses {weaponAttribute} and does {weaponDamage} damage with a +{weaponToHit} to hit");
                 }
+                
+                foreach (string weaponName in weaponArray)
+                {
+                    Console.WriteLine(weaponName);
+                }
+                string[] WeaponList = weaponArray.ToArray();
             }
 
             Console.ReadKey();
